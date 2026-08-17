@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #f6f7fa;
+  --bg-elevated: #ffffff;
+  --bg-sunken: #eceef3;
+  --text-primary: #0a0d14;
+  --text-secondary: #565d6b;
+  --text-tertiary: #8a909c;
+  --border: #dfe2e8;
+  --border-strong: #c7cbd4;
+
+  --accent: #1e4fd8;
+  --accent-hover: #1a44bf;
+  --accent-soft: #e8edfc;
+  --accent-1: #0f1e6b;
+  --accent-2: #3e8eff;
+  --accent-on: #ffffff;
+
+  --success: #1a7f4e;
+  --error: #c5324a;
+
+  --logo-filter: grayscale(1) contrast(0.9);
+  --logo-opacity: 0.72;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0a0b0f;
+  --bg-elevated: #121319;
+  --bg-sunken: #06070a;
+  --text-primary: #f4f5f7;
+  --text-secondary: #a5abb8;
+  --text-tertiary: #6b7180;
+  --border: #22252d;
+  --border-strong: #2f333d;
+
+  --accent: #4c86ff;
+  --accent-hover: #6a9cff;
+  --accent-soft: #16233f;
+  --accent-1: #16296e;
+  --accent-2: #5b9dff;
+  --accent-on: #06070a;
+
+  --success: #3fbf80;
+  --error: #e5677d;
+
+  --logo-filter: grayscale(1) contrast(0.9) invert(1) brightness(1.6);
+  --logo-opacity: 0.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a0b0f;
+    --bg-elevated: #121319;
+    --bg-sunken: #06070a;
+    --text-primary: #f4f5f7;
+    --text-secondary: #a5abb8;
+    --text-tertiary: #6b7180;
+    --border: #22252d;
+    --border-strong: #2f333d;
+
+    --accent: #4c86ff;
+    --accent-hover: #6a9cff;
+    --accent-soft: #16233f;
+    --accent-1: #16296e;
+    --accent-2: #5b9dff;
+    --accent-on: #06070a;
+
+    --success: #3fbf80;
+    --error: #e5677d;
+
+    --logo-filter: grayscale(1) contrast(0.9) invert(1) brightness(1.6);
+    --logo-opacity: 0.6;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-sunken: var(--bg-sunken);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-on: var(--accent-on);
+  --color-success: var(--success);
+  --color-error: var(--error);
+  --font-display: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+}
+
+.accent-gradient-text {
+  background: linear-gradient(120deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.accent-gradient-bg {
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+}
+
+.logo-mono {
+  filter: var(--logo-filter);
+  opacity: var(--logo-opacity);
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+.logo-mono:hover {
+  filter: none;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
