@@ -34,8 +34,7 @@ export function Hero() {
             className="text-4xl font-bold leading-[1.1] tracking-tight text-text-primary md:text-5xl"
           >
             We&apos;re a venture builder backing{" "}
-            <span className="accent-gradient-text">validated AI products</span>{" "}
-            out of Kenya.
+            <span className="accent-gradient-text">validated AI products</span>.
           </motion.h1>
 
           <motion.p
@@ -64,8 +63,8 @@ export function Hero() {
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[20px] bg-bg-sunken">
             <Image
-              src="https://picsum.photos/seed/nairobi-skyline-blue-hour/900/1125"
-              alt="Nairobi skyline at dusk"
+              src="https://picsum.photos/seed/blue-hour-architecture-glass/900/1125"
+              alt="Modern architecture at dusk"
               fill
               priority
               sizes="(max-width: 768px) 100vw, 500px"

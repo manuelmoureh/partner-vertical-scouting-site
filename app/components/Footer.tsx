@@ -1,14 +1,27 @@
+import Link from "next/link";
 import { BrandLockup } from "./BrandMark";
 
 export function Footer() {
   return (
     <footer>
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-14 md:flex-row md:items-start md:justify-between">
+      <div className="mx-auto flex max-w-7xl flex-col gap-10 px-6 py-14 md:flex-row md:items-start md:justify-between">
         <div>
           <BrandLockup />
           <p className="mt-4 max-w-[38ch] text-[14.5px] leading-relaxed text-text-secondary">
-            A venture builder backing validated AI products out of Kenya.
+            A venture builder backing validated AI products.
           </p>
+        </div>
+
+        <div className="flex flex-col gap-2 text-[14.5px] text-text-secondary">
+          <Link href="/about" className="w-fit transition-colors hover:text-text-primary">
+            About
+          </Link>
+          <Link href="/proof" className="w-fit transition-colors hover:text-text-primary">
+            Proof
+          </Link>
+          <Link href="/faq" className="w-fit transition-colors hover:text-text-primary">
+            FAQ
+          </Link>
         </div>
 
         <div className="flex flex-col gap-2 text-[14.5px] text-text-secondary">
@@ -18,7 +31,6 @@ export function Footer() {
           >
             manuelmoureh@gmail.com
           </a>
-          <p>Nairobi, Kenya</p>
         </div>
       </div>
 

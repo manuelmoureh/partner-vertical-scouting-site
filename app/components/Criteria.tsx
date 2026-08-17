@@ -10,7 +10,7 @@ export function Criteria() {
           </h3>
           <p className="mt-4 max-w-[42ch] text-[17px] leading-relaxed text-text-secondary">
             Validated AI products with real users, revenue, or a working
-            demo, not a slide deck. Kenya-based, for now.
+            demo, not a slide deck.
           </p>
         </Reveal>
 

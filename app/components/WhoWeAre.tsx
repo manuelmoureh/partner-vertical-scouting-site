@@ -1,11 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
-
-const ventures = [
-  { name: "Afridemy", src: "/logos/afridemy.png", w: 132, h: 40 },
-  { name: "Africore Tech", src: "/logos/africore-tech.png", w: 150, h: 40 },
-  { name: "Dream Credit", src: "/logos/dream-credit.png", w: 120, h: 40 },
-];
 
 export function WhoWeAre() {
   return (
@@ -16,29 +11,27 @@ export function WhoWeAre() {
             Built by someone who&apos;s already done this.
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-text-secondary">
-            Manuel Moureh builds AI systems for African businesses. He built
-            the lending infrastructure behind Dream Credit, the growth
-            systems behind Africore Tech, and founded Afridemy.
+            Manuel Moureh builds AI systems for African businesses. He
+            founded Afridemy, and brings the same builder discipline to
+            every company he backs.
           </p>
+          <Link
+            href="/about"
+            className="mt-4 inline-block text-[15px] font-medium text-accent underline decoration-transparent underline-offset-4 transition-colors hover:decoration-accent"
+          >
+            More about the founder
+          </Link>
         </Reveal>
 
-        <Reveal delay={0.1} className="mt-14">
-          <p className="text-[13px] font-medium uppercase tracking-[0.08em] text-text-tertiary">
-            Built by the same founder
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-x-12 gap-y-6">
-            {ventures.map((v) => (
-              <Image
-                key={v.name}
-                src={v.src}
-                alt={v.name}
-                width={v.w}
-                height={v.h}
-                loading="eager"
-                className="logo-mono h-8 w-auto object-contain"
-              />
-            ))}
-          </div>
+        <Reveal delay={0.1} className="mt-10">
+          <Image
+            src="/logos/afridemy.png"
+            alt="Afridemy"
+            width={132}
+            height={40}
+            loading="eager"
+            className="logo-mono h-8 w-auto object-contain"
+          />
         </Reveal>
       </div>
     </section>
