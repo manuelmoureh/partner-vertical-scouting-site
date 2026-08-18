@@ -6,16 +6,16 @@ const offers = [
     body: "Sized to what the business actually needs.",
   },
   {
-    label: "Engineering support",
-    body: "Hands-on build capacity, embedded alongside your team.",
+    label: "Engineers",
+    body: "Hands-on, embedded alongside your team.",
   },
   {
-    label: "Investor and client access",
-    body: "Warm introductions into our network.",
+    label: "Investors and clients",
+    body: "Warm introductions from our network.",
   },
   {
     label: "Scaling support",
-    body: "Fundraising, go-to-market, and exit-readiness help as you grow.",
+    body: "Fundraising, growth strategy, and help preparing for your next raise or sale.",
   },
 ];
 

@@ -15,11 +15,11 @@ const faqs = [
   },
   {
     q: "What do you provide?",
-    a: "Capital, engineering support, and warm investor and client introductions, plus help with fundraising, go-to-market, and exit readiness as you grow.",
+    a: "Capital, engineers, and warm introductions to investors and clients, plus help fundraising and preparing for your next raise or sale.",
   },
   {
     q: "What do you take in return?",
-    a: "We discuss terms directly with applicants once there's mutual interest. There's no public rate card, because every situation is different.",
+    a: "We discuss terms directly, once we're both interested. It depends on the business, so there's no fixed number we can share here.",
   },
   {
     q: "Is there a cost to apply?",

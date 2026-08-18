@@ -8,7 +8,7 @@ export function Footer() {
         <div>
           <BrandLockup />
           <p className="mt-4 max-w-[38ch] text-[14.5px] leading-relaxed text-text-secondary">
-            A venture builder backing validated AI products.
+            We back validated AI products and help them scale.
           </p>
         </div>
 

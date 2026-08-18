@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         title="Our approach."
-        lead="We're a venture builder: capital, hands-on building support, and access, combined."
+        lead="We're a venture builder. We provide capital, hands-on engineering help, and access to investors and clients, all together."
       />
 
       <section className="border-b border-border">
@@ -39,10 +39,9 @@ export default function AboutPage() {
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-text-secondary">
               A validated product proves the idea works, but scaling it
-              takes investor access, engineering capacity, and client
-              relationships most founders don&apos;t have yet. Vuria closes
-              that gap for founders who&apos;ve already proven the first
-              part works.
+              takes investors, engineers, and clients most founders
+              don&apos;t have yet. Vuria closes that gap for founders
+              who&apos;ve already proven the first part works.
             </p>
           </Reveal>
         </div>

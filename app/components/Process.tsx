@@ -14,7 +14,7 @@ const steps = [
   {
     n: "03",
     label: "Partner",
-    body: "Terms are discussed directly, once there's mutual interest.",
+    body: "We talk terms directly, once we're both interested.",
   },
   {
     n: "04",

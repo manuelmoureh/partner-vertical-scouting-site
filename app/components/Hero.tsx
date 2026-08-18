@@ -20,8 +20,8 @@ const item = {
 
 const offers = [
   "Capital",
-  "Engineering support",
-  "Investor and client access",
+  "Engineers",
+  "Investors and clients",
   "Scaling support",
 ];
 
@@ -42,8 +42,9 @@ export function Hero() {
               variants={item}
               className="max-w-[18ch] text-4xl font-bold leading-[1.1] tracking-tight text-text-primary md:text-5xl"
             >
-              We&apos;re a venture builder backing{" "}
-              <span className="accent-gradient-text">validated AI products</span>.
+              We back{" "}
+              <span className="accent-gradient-text">validated AI products</span>{" "}
+              and help them scale.
             </motion.h1>
 
             <motion.p

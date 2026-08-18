@@ -11,9 +11,9 @@ export function Gap() {
           </h2>
           <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-text-secondary">
             A validated product proves the idea works. Scaling it takes
-            investor access, engineering capacity, and client relationships
-            most founders don&apos;t have yet. We close that gap for
-            founders who&apos;ve already proven the first part.
+            investors, engineers, and clients most founders don&apos;t have
+            yet. We close that gap for founders who&apos;ve already proven
+            the first part.
           </p>
         </Reveal>
 
