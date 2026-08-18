@@ -30,24 +30,7 @@ export function Hero() {
 
   return (
     <section id="top" className="border-b border-border">
-      <motion.div
-        initial={reduce ? false : { opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      >
-        <div className="relative h-[140px] w-full overflow-hidden bg-bg-sunken sm:h-[180px] md:h-[220px] lg:h-[260px]">
-          <Image
-            src="/photos/hero-towers.jpg"
-            alt="Modern city skyline of glass towers"
-            width={1376}
-            height={768}
-            priority
-            className="h-full w-full object-cover"
-          />
-        </div>
-      </motion.div>
-
-      <div className="mx-auto max-w-7xl px-6 py-8 md:py-12">
+      <div className="mx-auto max-w-7xl px-6 pb-10 pt-10 md:pb-12 md:pt-14">
         <motion.div
           className="grid gap-8 md:grid-cols-12 md:items-start md:gap-10"
           variants={container}
@@ -107,6 +90,23 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
+
+      <motion.div
+        initial={reduce ? false : { opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <div className="relative h-[220px] w-full overflow-hidden bg-bg-sunken sm:h-[280px] md:h-[340px] lg:h-[400px]">
+          <Image
+            src="/photos/hero-towers.jpg"
+            alt="Modern city skyline of glass towers"
+            width={1376}
+            height={768}
+            priority
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }
