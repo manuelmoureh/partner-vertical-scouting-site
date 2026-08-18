@@ -125,7 +125,7 @@ export function SubmissionForm() {
   if (status === "success") {
     return (
       <section id="apply" className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
           <div className="mx-auto flex max-w-[480px] flex-col items-center rounded-[20px] border border-border bg-bg-elevated px-8 py-14 text-center">
             <CheckCircle size={40} weight="fill" className="text-accent" />
             <h2 className="mt-5 text-2xl font-bold tracking-tight text-text-primary">
@@ -143,7 +143,7 @@ export function SubmissionForm() {
 
   return (
     <section id="apply" className="border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
         <Reveal className="max-w-[56ch]">
           <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
             Apply

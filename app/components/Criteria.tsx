@@ -22,7 +22,7 @@ const offers = [
 export function Criteria() {
   return (
     <section id="what-we-provide" className="border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
         <Reveal className="max-w-[62ch]">
           <h3 className="text-2xl font-bold tracking-tight text-text-primary">
             What we look for
@@ -33,13 +33,16 @@ export function Criteria() {
           </p>
         </Reveal>
 
-        <Reveal delay={0.08} className="mt-16 border-t border-border pt-16">
+        <Reveal delay={0.08} className="mt-14 border-t border-border pt-14">
           <h3 className="text-2xl font-bold tracking-tight text-text-primary">
             What we provide
           </h3>
-          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
             {offers.map((offer) => (
-              <div key={offer.label}>
+              <div
+                key={offer.label}
+                className="rounded-[16px] border border-border bg-bg-elevated p-6"
+              >
                 <p className="text-[17px] font-medium text-text-primary">
                   {offer.label}
                 </p>

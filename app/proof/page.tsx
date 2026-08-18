@@ -12,6 +12,7 @@ const ventures = [
   { name: "Trance AI", src: "/logos/trance-ai.png", w: 220, h: 40 },
   { name: "Afridemy", src: "/logos/afridemy.png", w: 220, h: 55 },
   { name: "Novara", src: "/logos/novara.png", w: 190, h: 33 },
+  { name: "Tizy", src: "/logos/tizy.png", w: 200, h: 40 },
   { name: "Zenia", src: "/logos/zenia.png", w: 130, h: 51 },
 ];
 
@@ -26,18 +27,17 @@ export default function ProofPage() {
       <section>
         <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
           <Reveal className="rounded-[20px] border border-border bg-bg-elevated p-8 md:p-12">
-            <div className="grid grid-cols-2 gap-x-10 gap-y-10 md:grid-cols-4">
+            <div className="flex flex-wrap items-center gap-x-14 gap-y-10">
               {ventures.map((v) => (
-                <div key={v.name} className="flex items-center">
-                  <Image
-                    src={v.src}
-                    alt={v.name}
-                    width={v.w}
-                    height={v.h}
-                    loading="eager"
-                    className="h-9 w-auto object-contain md:h-10"
-                  />
-                </div>
+                <Image
+                  key={v.name}
+                  src={v.src}
+                  alt={v.name}
+                  width={v.w}
+                  height={v.h}
+                  loading="eager"
+                  className="h-9 w-auto object-contain md:h-10"
+                />
               ))}
             </div>
           </Reveal>
