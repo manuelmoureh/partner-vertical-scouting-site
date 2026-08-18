@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What are you looking for?",
-    a: "Validated AI products with real users, revenue, or a working demo. Not idea-stage, and not a slide deck.",
+    a: "Validated AI products with real users, revenue, or a working demo.",
   },
   {
     q: "What do you provide?",
-    a: "Access: to investors, engineers, and clients, so you can scale what you've already built.",
+    a: "Capital, engineering support, and warm investor and client introductions, plus help with fundraising, go-to-market, and exit readiness as you grow.",
   },
   {
     q: "What do you take in return?",

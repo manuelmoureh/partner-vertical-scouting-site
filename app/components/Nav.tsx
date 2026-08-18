@@ -6,7 +6,7 @@ import { List, X } from "@phosphor-icons/react";
 import { BrandLockup } from "./BrandMark";
 
 const links = [
-  { href: "/about", label: "About" },
+  { href: "/about", label: "Approach" },
   { href: "/proof", label: "Proof" },
   { href: "/faq", label: "FAQ" },
 ];

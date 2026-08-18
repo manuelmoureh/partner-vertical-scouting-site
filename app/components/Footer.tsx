@@ -14,7 +14,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-2 text-[14.5px] text-text-secondary">
           <Link href="/about" className="w-fit transition-colors hover:text-text-primary">
-            About
+            Approach
           </Link>
           <Link href="/proof" className="w-fit transition-colors hover:text-text-primary">
             Proof

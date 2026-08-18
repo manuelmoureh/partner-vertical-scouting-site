@@ -1,14 +1,18 @@
 import { Hero } from "./components/Hero";
-import { WhoWeAre } from "./components/WhoWeAre";
+import { Gap } from "./components/Gap";
+import { VenturesTeaser } from "./components/VenturesTeaser";
 import { Criteria } from "./components/Criteria";
+import { Process } from "./components/Process";
 import { SubmissionForm } from "./components/SubmissionForm";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <WhoWeAre />
+      <Gap />
+      <VenturesTeaser />
       <Criteria />
+      <Process />
       <SubmissionForm />
     </>
   );

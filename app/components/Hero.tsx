@@ -22,16 +22,15 @@ export function Hero() {
 
   return (
     <section id="top" className="border-b border-border">
-      <div className="mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-12 md:grid-cols-12 md:items-center md:pb-28 md:pt-16">
+      <div className="mx-auto max-w-7xl px-6 pb-16 pt-12 md:pb-20 md:pt-16">
         <motion.div
-          className="md:col-span-7"
           variants={container}
           initial={reduce ? false : "hidden"}
           animate="show"
         >
           <motion.h1
             variants={item}
-            className="text-4xl font-bold leading-[1.1] tracking-tight text-text-primary md:text-5xl"
+            className="max-w-[18ch] text-4xl font-bold leading-[1.1] tracking-tight text-text-primary md:text-5xl"
           >
             We&apos;re a venture builder backing{" "}
             <span className="accent-gradient-text">validated AI products</span>.
@@ -54,32 +53,25 @@ export function Hero() {
             </a>
           </motion.div>
         </motion.div>
-
-        <motion.div
-          className="md:col-span-5"
-          initial={reduce ? false : { opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[20px] bg-bg-sunken">
-            <Image
-              src="https://picsum.photos/seed/blue-hour-architecture-glass/900/1125"
-              alt="Modern architecture at dusk"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 500px"
-              className="object-cover"
-            />
-            <div
-              className="pointer-events-none absolute inset-0"
-              style={{
-                background:
-                  "linear-gradient(180deg, rgba(10,11,15,0) 45%, rgba(10,11,15,0.55) 100%)",
-              }}
-            />
-          </div>
-        </motion.div>
       </div>
+
+      <motion.div
+        className="mx-auto max-w-7xl px-6 pb-20 md:pb-28"
+        initial={reduce ? false : { opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-[20px] bg-bg-sunken">
+          <Image
+            src="/photos/hero-towers.jpg"
+            alt="Modern city skyline of glass towers"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+      </motion.div>
     </section>
   );
 }

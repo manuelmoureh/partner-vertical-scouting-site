@@ -1,30 +1,54 @@
 import { Reveal } from "./Reveal";
 
+const offers = [
+  {
+    label: "Capital",
+    body: "Sized to what the business actually needs.",
+  },
+  {
+    label: "Engineering support",
+    body: "Hands-on build capacity, embedded alongside your team.",
+  },
+  {
+    label: "Investor and client access",
+    body: "Warm introductions into our network.",
+  },
+  {
+    label: "Scaling support",
+    body: "Fundraising, go-to-market, and exit-readiness help as you grow.",
+  },
+];
+
 export function Criteria() {
   return (
     <section id="what-we-provide" className="border-b border-border">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:gap-16 md:py-28">
-        <Reveal>
+      <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+        <Reveal className="max-w-[62ch]">
           <h3 className="text-2xl font-bold tracking-tight text-text-primary">
             What we look for
           </h3>
-          <p className="mt-4 max-w-[42ch] text-[17px] leading-relaxed text-text-secondary">
+          <p className="mt-4 max-w-[52ch] text-[17px] leading-relaxed text-text-secondary">
             Validated AI products with real users, revenue, or a working
-            demo, not a slide deck.
+            demo.
           </p>
         </Reveal>
 
-        <Reveal
-          delay={0.08}
-          className="border-t border-border pt-10 md:border-t-0 md:border-l md:pt-0 md:pl-16"
-        >
+        <Reveal delay={0.08} className="mt-16 border-t border-border pt-16">
           <h3 className="text-2xl font-bold tracking-tight text-text-primary">
             What we provide
           </h3>
-          <p className="mt-4 max-w-[42ch] text-[17px] leading-relaxed text-text-secondary">
-            Access to investors, engineers, and clients, so you can scale
-            what you&apos;ve already built.
-          </p>
+          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+            {offers.map((offer) => (
+              <div key={offer.label}>
+                <p className="text-[17px] font-medium text-text-primary">
+                  {offer.label}
+                </p>
+                <p className="mt-2 max-w-[38ch] text-[15.5px] leading-relaxed text-text-secondary">
+                  {offer.body}
+                </p>
+              </div>
+            ))}
+          </div>
         </Reveal>
       </div>
     </section>
