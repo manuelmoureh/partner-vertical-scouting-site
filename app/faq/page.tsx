@@ -4,8 +4,8 @@ import { PageHeader } from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
 
 export const metadata: Metadata = {
-  title: "FAQ | Trance Ventures",
-  description: "Answers to common questions about applying to Trance Ventures.",
+  title: "FAQ | Vuria",
+  description: "Answers to common questions about applying to Vuria.",
 };
 
 const faqs = [

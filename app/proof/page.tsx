@@ -5,8 +5,8 @@ import { PageHeader } from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Proof | Trance Ventures",
-  description: "Trance Ventures hasn't backed anyone yet. Here's what the team has already built.",
+  title: "Proof | Vuria",
+  description: "Vuria hasn't backed anyone yet. Here's what the team has already built.",
 };
 
 export default function ProofPage() {
@@ -14,7 +14,7 @@ export default function ProofPage() {
     <>
       <PageHeader
         title="Proof, not a portfolio."
-        lead="Trance Ventures is new. We haven't backed anyone yet. But the team has already built what this model is meant to produce."
+        lead="Vuria is new. We haven't backed anyone yet. But the team has already built what this model is meant to produce."
       />
 
       <section>
@@ -31,8 +31,7 @@ export default function ProofPage() {
             <p className="mt-6 text-lg leading-relaxed text-text-secondary">
               An AI-systems training platform for African builders,
               credentialed through verified project work rather than a
-              certificate. Founded and built by the same team behind Trance
-              Ventures.
+              certificate. Founded and built by the same team behind Vuria.
             </p>
             <Link
               href="/about"

@@ -4,8 +4,8 @@ import { PageHeader } from "../components/PageHeader";
 import { Reveal } from "../components/Reveal";
 
 export const metadata: Metadata = {
-  title: "About | Trance Ventures",
-  description: "Why Trance Ventures exists, and who's behind it.",
+  title: "About | Vuria",
+  description: "Why Vuria exists, and who's behind it.",
 };
 
 export default function AboutPage() {
@@ -30,7 +30,7 @@ export default function AboutPage() {
               certificate.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-              Trance Ventures applies the same hands-on approach, one stage
+              Vuria applies the same hands-on approach, one stage
               further along: to founders who&apos;ve already built something
               real.
             </p>
@@ -58,7 +58,7 @@ export default function AboutPage() {
             <p className="mt-4 text-lg leading-relaxed text-text-secondary">
               There&apos;s a gap between having a validated product and
               having the investor access, engineering capacity, and client
-              relationships to scale it. Trance Ventures closes that gap for
+              relationships to scale it. Vuria closes that gap for
               founders who&apos;ve already proven the first part works.
             </p>
           </Reveal>

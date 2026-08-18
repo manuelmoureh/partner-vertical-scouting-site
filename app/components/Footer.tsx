@@ -36,7 +36,7 @@ export function Footer() {
 
       <div className="mx-auto max-w-7xl px-6 pb-10">
         <p className="text-[13px] text-text-tertiary">
-          &copy; {new Date().getFullYear()} Trance Ventures.
+          &copy; {new Date().getFullYear()} Vuria.
         </p>
       </div>
     </footer>

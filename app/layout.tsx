@@ -4,7 +4,7 @@ import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Trance Ventures | Backing validated AI products",
+  title: "Vuria | Backing validated AI products",
   description:
     "We're a venture builder backing validated AI products. We provide access to investors, engineers, and clients to help you scale what you've already built.",
 };
