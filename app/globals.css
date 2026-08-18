@@ -30,18 +30,18 @@
 }
 
 :root {
-  --bg: #f6f7fa;
-  --bg-elevated: #ffffff;
-  --bg-sunken: #eceef3;
+  --bg: #eef0f5;
+  --bg-elevated: #f8f9fb;
+  --bg-sunken: #e3e6ed;
   --text-primary: #0a0d14;
   --text-secondary: #565d6b;
   --text-tertiary: #8a909c;
-  --border: #dfe2e8;
+  --border: #d9dce3;
   --border-strong: #c7cbd4;
 
   --accent: #1e4fd8;
   --accent-hover: #1a44bf;
-  --accent-soft: #e8edfc;
+  --accent-soft: #dbe3fa;
   --accent-1: #4d55ef;
   --accent-2: #15a9fb;
   --accent-on: #ffffff;

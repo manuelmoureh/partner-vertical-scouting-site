@@ -9,7 +9,7 @@ export function BrandLockup({ className = "" }: { className?: string }) {
         width={1538}
         height={508}
         priority
-        className="h-7 w-auto object-contain"
+        className="h-7 w-auto -translate-y-[1px] object-contain"
       />
     </span>
   );

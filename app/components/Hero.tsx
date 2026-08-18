@@ -25,6 +25,14 @@ const offers = [
   "Scaling support",
 ];
 
+const ventures = [
+  { name: "Trance AI", src: "/logos/trance-ai.png", w: 130, h: 24 },
+  { name: "Afridemy", src: "/logos/afridemy.png", w: 130, h: 33 },
+  { name: "Novara", src: "/logos/novara.png", w: 110, h: 19 },
+  { name: "Tizy", src: "/logos/tizy.png", w: 110, h: 22 },
+  { name: "Zenia", src: "/logos/zenia.png", w: 78, h: 30 },
+];
+
 export function Hero() {
   const reduce = useReducedMotion();
 
@@ -32,7 +40,7 @@ export function Hero() {
     <section id="top" className="border-b border-border">
       <div className="mx-auto max-w-7xl px-6 pb-10 pt-10 md:pb-12 md:pt-14">
         <motion.div
-          className="grid gap-8 md:grid-cols-12 md:items-start md:gap-10"
+          className="grid gap-8 md:grid-cols-12 md:gap-10"
           variants={container}
           initial={reduce ? false : "hidden"}
           animate="show"
@@ -40,11 +48,11 @@ export function Hero() {
           <div className="md:col-span-7">
             <motion.h1
               variants={item}
-              className="max-w-[18ch] text-4xl font-bold leading-[1.1] tracking-tight text-text-primary md:text-5xl"
+              className="text-4xl font-bold leading-[1.1] tracking-tight text-text-primary md:text-5xl"
             >
               We back{" "}
-              <span className="accent-gradient-text">validated AI products</span>{" "}
-              and help them scale.
+              <span className="accent-gradient-text">validated AI</span>{" "}
+              products and help them scale.
             </motion.h1>
 
             <motion.p
@@ -62,12 +70,37 @@ export function Hero() {
               >
                 Apply now
               </a>
+              <p className="mt-3 text-[13px] text-text-tertiary">
+                Free to apply. No obligation.
+              </p>
+            </motion.div>
+
+            <motion.div variants={item} className="mt-12">
+              <p className="text-[13px] text-text-tertiary">
+                Built by the same team behind
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-4">
+                {ventures.map((v) => (
+                  <Image
+                    key={v.name}
+                    src={v.src}
+                    alt={v.name}
+                    width={v.w}
+                    height={v.h}
+                    loading="eager"
+                    className="logo-mono h-5 w-auto object-contain"
+                  />
+                ))}
+              </div>
             </motion.div>
           </div>
 
-          <motion.div variants={item} className="md:col-span-5">
+          <motion.div
+            variants={item}
+            className="flex md:col-span-5 md:h-full md:flex-col md:justify-center"
+          >
             <div className="overflow-hidden rounded-[16px] border border-border">
-              <div className="bg-accent-soft px-5 py-2.5 text-[13px] font-medium uppercase tracking-[0.06em] text-accent">
+              <div className="bg-accent px-5 py-2.5 text-[13px] font-medium uppercase tracking-[0.06em] text-accent-on">
                 What we provide
               </div>
               <div className="divide-y divide-border bg-bg-elevated">
@@ -93,6 +126,7 @@ export function Hero() {
       </div>
 
       <motion.div
+        className="relative"
         initial={reduce ? false : { opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
@@ -105,6 +139,12 @@ export function Hero() {
             height={768}
             priority
             className="h-full w-full object-cover"
+          />
+          <div
+            className="pointer-events-none absolute inset-x-0 top-0 h-16"
+            style={{
+              background: "linear-gradient(180deg, var(--bg), transparent)",
+            }}
           />
         </div>
       </motion.div>
