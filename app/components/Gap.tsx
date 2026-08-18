@@ -22,10 +22,10 @@ export function Gap() {
             <Image
               src="/photos/typing-detail.jpg"
               alt="Working on a laptop, close detail"
-              fill
+              width={1200}
+              height={896}
               loading="eager"
-              sizes="(max-width: 768px) 100vw, 420px"
-              className="object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
         </Reveal>

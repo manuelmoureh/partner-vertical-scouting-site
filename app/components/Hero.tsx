@@ -65,10 +65,10 @@ export function Hero() {
           <Image
             src="/photos/hero-towers.jpg"
             alt="Modern city skyline of glass towers"
-            fill
+            width={1376}
+            height={768}
             priority
-            sizes="100vw"
-            className="object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
       </motion.div>
