@@ -35,7 +35,7 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div className="relative aspect-[21/9] w-full overflow-hidden bg-bg-sunken md:aspect-[3/1]">
+        <div className="relative h-[140px] w-full overflow-hidden bg-bg-sunken sm:h-[180px] md:h-[220px] lg:h-[260px]">
           <Image
             src="/photos/hero-towers.jpg"
             alt="Modern city skyline of glass towers"
@@ -47,9 +47,9 @@ export function Hero() {
         </div>
       </motion.div>
 
-      <div className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+      <div className="mx-auto max-w-7xl px-6 py-8 md:py-12">
         <motion.div
-          className="grid gap-12 md:grid-cols-12 md:items-start md:gap-10"
+          className="grid gap-8 md:grid-cols-12 md:items-start md:gap-10"
           variants={container}
           initial={reduce ? false : "hidden"}
           animate="show"
@@ -83,14 +83,14 @@ export function Hero() {
 
           <motion.div variants={item} className="md:col-span-5">
             <div className="overflow-hidden rounded-[16px] border border-border">
-              <div className="bg-accent-soft px-5 py-3 text-[13px] font-medium uppercase tracking-[0.06em] text-accent">
+              <div className="bg-accent-soft px-5 py-2.5 text-[13px] font-medium uppercase tracking-[0.06em] text-accent">
                 What we provide
               </div>
               <div className="divide-y divide-border bg-bg-elevated">
                 {offers.map((offer) => (
                   <div
                     key={offer}
-                    className="flex items-center gap-3 px-5 py-4"
+                    className="flex items-center gap-3 px-5 py-3"
                   >
                     <AsteriskSimple
                       size={14}
