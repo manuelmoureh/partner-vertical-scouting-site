@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const NOTIFY_EMAIL = process.env.APPLICATION_NOTIFY_EMAIL || "hello@trance-ai.com";
+const NOTIFY_EMAIL = process.env.APPLICATION_NOTIFY_EMAIL || "manuel@trance-ai.com";
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || "Vuria <onboarding@resend.dev>";
 
 type Payload = {
@@ -58,7 +58,7 @@ export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   try {
-    await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: FROM_EMAIL,
       to: NOTIFY_EMAIL,
       replyTo: body.email,
@@ -77,6 +77,11 @@ export async function POST(req: Request) {
         .filter(Boolean)
         .join("\n"),
     });
+
+    if (error) {
+      console.error("Resend rejected the send", error);
+      return NextResponse.json({ error: "Failed to send." }, { status: 502 });
+    }
   } catch (err) {
     console.error("Resend send failed", err);
     return NextResponse.json({ error: "Failed to send." }, { status: 502 });
