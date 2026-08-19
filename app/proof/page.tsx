@@ -28,7 +28,7 @@ const live = [
     size: "h-12",
     description:
       "Trains African talent in practical AI-systems building, credentialed through verified, real deployed work instead of a certificate.",
-    url: "http://afridemy.online/",
+    url: "https://afridemy.online/",
   },
 ];
 

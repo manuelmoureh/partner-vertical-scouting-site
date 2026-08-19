@@ -120,9 +120,12 @@ export function SubmissionForm() {
 
     setStatus("submitting");
     try {
-      // TODO: wire to the real submission destination (form backend / spreadsheet).
-      // UI-only for now, per explicit instruction to defer backend wiring.
-      await new Promise((resolve) => setTimeout(resolve, 900));
+      const res = await fetch("/api/apply", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Application send failed");
       setStatus("success");
     } catch {
       setStatus("error");
