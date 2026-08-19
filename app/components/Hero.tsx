@@ -25,14 +25,6 @@ const offers = [
   "Scaling support",
 ];
 
-const ventures = [
-  { name: "Trance AI", src: "/logos/trance-ai.png", w: 130, h: 24 },
-  { name: "Afridemy", src: "/logos/afridemy.png", w: 130, h: 33 },
-  { name: "Novara", src: "/logos/novara.png", w: 110, h: 19 },
-  { name: "Tizy", src: "/logos/tizy.png", w: 110, h: 22 },
-  { name: "Zenia", src: "/logos/zenia.png", w: 78, h: 30 },
-];
-
 export function Hero() {
   const reduce = useReducedMotion();
 
@@ -73,25 +65,6 @@ export function Hero() {
               <p className="mt-3 text-[13px] text-text-tertiary">
                 Free to apply. No obligation.
               </p>
-            </motion.div>
-
-            <motion.div variants={item} className="mt-12">
-              <p className="text-[13px] text-text-tertiary">
-                Built by the same team behind
-              </p>
-              <div className="mt-4 flex flex-wrap items-center gap-x-8 gap-y-4">
-                {ventures.map((v) => (
-                  <Image
-                    key={v.name}
-                    src={v.src}
-                    alt={v.name}
-                    width={v.w}
-                    height={v.h}
-                    loading="eager"
-                    className="logo-mono h-5 w-auto object-contain"
-                  />
-                ))}
-              </div>
             </motion.div>
           </div>
 
