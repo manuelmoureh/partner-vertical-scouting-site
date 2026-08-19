@@ -1,5 +1,5 @@
 import { Hero } from "./components/Hero";
-import { Gap } from "./components/Gap";
+import { WhatWeDo } from "./components/WhatWeDo";
 import { VenturesTeaser } from "./components/VenturesTeaser";
 import { Criteria } from "./components/Criteria";
 import { Process } from "./components/Process";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Gap />
+      <WhatWeDo />
       <VenturesTeaser />
       <Criteria />
       <Process />
