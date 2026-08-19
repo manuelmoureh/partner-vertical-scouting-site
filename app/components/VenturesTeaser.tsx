@@ -16,7 +16,7 @@ export function VenturesTeaser() {
       <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
         <Reveal className="max-w-[62ch]">
           <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
-            Built by the same team behind these ventures.
+            The ventures we&apos;re backing first.
           </h2>
         </Reveal>
 

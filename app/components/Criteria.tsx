@@ -3,19 +3,19 @@ import { Reveal } from "./Reveal";
 const offers = [
   {
     label: "Capital",
-    body: "Sized to what the business actually needs.",
+    body: "A check sized to the stage you're actually at, so you're not raising more than you need or diluting early for runway you won't use.",
   },
   {
     label: "Engineers",
-    body: "Hands-on, embedded alongside your team.",
+    body: "Our own engineers sit with your team on the specific problems slowing you down, whether that's infrastructure, AI implementation, or shipping features you don't have the hands for.",
   },
   {
     label: "Investors and clients",
-    body: "Warm introductions from our network.",
+    body: "Direct introductions to the specific investors and clients in our network who make sense for what you're building, made by us, not a cold list.",
   },
   {
     label: "Scaling support",
-    body: "Fundraising, growth strategy, and help preparing for your next raise or sale.",
+    body: "As you grow, help with fundraising strategy, pricing, and hiring, plus preparation for your next raise or exit when that time comes.",
   },
 ];
 

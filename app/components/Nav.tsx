@@ -35,7 +35,7 @@ export function Nav() {
 
         <div className="flex items-center gap-3">
           <Link
-            href="/#apply"
+            href="/apply"
             className="hidden h-10 items-center rounded-full bg-accent px-5 text-[14.5px] font-medium text-accent-on transition-colors hover:bg-accent-hover md:inline-flex"
           >
             Apply now
@@ -67,7 +67,7 @@ export function Nav() {
               </Link>
             ))}
             <Link
-              href="/#apply"
+              href="/apply"
               onClick={() => setOpen(false)}
               className="inline-flex h-11 w-fit items-center rounded-full bg-accent px-6 text-[15px] font-medium text-accent-on"
             >

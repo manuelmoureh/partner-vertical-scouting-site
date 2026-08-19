@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { CheckCircle, CircleNotch } from "@phosphor-icons/react";
 import { Reveal } from "./Reveal";
 
@@ -46,6 +47,12 @@ const fieldClass =
   "w-full rounded-[10px] border border-border bg-bg-elevated px-3.5 py-2.5 text-[15px] text-text-primary placeholder:text-text-tertiary focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent-soft transition-colors";
 
 const errorFieldClass = "border-error focus:border-error focus:ring-error/20";
+
+const reassurance = [
+  { n: "01", body: "We review every application ourselves." },
+  { n: "02", body: "If it's a fit, we reach out directly." },
+  { n: "03", body: "We talk terms once we're both interested." },
+];
 
 function Field({
   label,
@@ -124,8 +131,8 @@ export function SubmissionForm() {
 
   if (status === "success") {
     return (
-      <section id="apply" className="border-b border-border">
-        <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
+      <section className="border-b border-border">
+        <div className="mx-auto max-w-7xl px-6 pb-16 md:pb-24">
           <div className="mx-auto flex max-w-[480px] flex-col items-center rounded-[20px] border border-border bg-bg-elevated px-8 py-14 text-center">
             <CheckCircle size={40} weight="fill" className="text-accent" />
             <h2 className="mt-5 text-2xl font-bold tracking-tight text-text-primary">
@@ -142,20 +149,45 @@ export function SubmissionForm() {
   }
 
   return (
-    <section id="apply" className="border-b border-border">
-      <div className="mx-auto max-w-7xl px-6 py-16 md:py-24">
-        <Reveal className="max-w-[56ch]">
-          <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
-            Apply
-          </h2>
-          <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-            Tell us what you&apos;ve built. If it&apos;s a fit, we&apos;ll be
-            in touch.
-          </p>
-        </Reveal>
+    <section className="border-b border-border">
+      <div className="mx-auto max-w-7xl px-6 pb-16 md:pb-24">
+        <div className="grid gap-8 md:grid-cols-12 md:gap-10">
+          <Reveal className="md:col-span-4">
+            <div className="rounded-[20px] border border-border bg-bg-sunken p-7 md:sticky md:top-24">
+              <p className="text-[15px] font-medium text-text-primary">
+                What happens next
+              </p>
+              <div className="mt-5 flex flex-col gap-5">
+                {reassurance.map((r) => (
+                  <div key={r.n} className="flex gap-3">
+                    <span className="font-mono text-[13px] text-text-tertiary">
+                      {r.n}
+                    </span>
+                    <p className="text-[14.5px] leading-relaxed text-text-secondary">
+                      {r.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <p className="mt-6 border-t border-border pt-5 text-[13px] leading-relaxed text-text-tertiary">
+                Your information is only used to evaluate your application.{" "}
+                <Link
+                  href="/privacy"
+                  className="underline decoration-border underline-offset-2 transition-colors hover:decoration-text-tertiary"
+                >
+                  Privacy policy
+                </Link>
+                .
+              </p>
+            </div>
+          </Reveal>
 
-        <Reveal delay={0.1}>
-          <form onSubmit={handleSubmit} noValidate className="mt-12 max-w-[640px]">
+          <Reveal delay={0.1} className="md:col-span-8">
+            <form
+              onSubmit={handleSubmit}
+              noValidate
+              className="rounded-[20px] border border-border bg-bg-elevated p-7 md:p-10"
+            >
             <input
               type="text"
               name="company_website"
@@ -330,8 +362,9 @@ export function SubmissionForm() {
                 "Submit application"
               )}
             </button>
-          </form>
-        </Reveal>
+            </form>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

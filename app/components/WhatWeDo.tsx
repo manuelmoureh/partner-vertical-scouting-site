@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 const stats = [
   { value: "5", label: "Top African markets" },
-  { value: "5", label: "Ventures we've already built" },
+  { value: "5", label: "Ventures we've built" },
 ];
 
 const topRow = ["Kenya", "Nigeria", "South Africa", "Egypt"];
@@ -23,7 +23,10 @@ export function WhatWeDo() {
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-12 md:items-center md:gap-10 md:py-24">
         <Reveal className="md:col-span-7">
           <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-4xl">
-            Built for African founders, solving real problems in Africa.
+            Built for{" "}
+            <span className="accent-gradient-text">African</span> founders,
+            solving real problems in{" "}
+            <span className="accent-gradient-text">Africa</span>.
           </h2>
           <p className="mt-5 max-w-[54ch] text-lg leading-relaxed text-text-secondary">
             We invest in AI products that already have real users or
@@ -53,7 +56,7 @@ export function WhatWeDo() {
               width={811}
               height={923}
               loading="eager"
-              className="h-24 w-auto object-contain"
+              className="h-72 w-auto object-contain"
             />
             <div className="flex flex-col items-center gap-3">
               <div className="flex flex-wrap items-center justify-center gap-3">

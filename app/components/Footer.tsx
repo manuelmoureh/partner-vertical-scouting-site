@@ -22,14 +22,17 @@ export function Footer() {
           <Link href="/faq" className="w-fit transition-colors hover:text-text-primary">
             FAQ
           </Link>
+          <Link href="/privacy" className="w-fit transition-colors hover:text-text-primary">
+            Privacy
+          </Link>
         </div>
 
         <div className="flex flex-col gap-2 text-[14.5px] text-text-secondary">
           <a
-            href="mailto:manuelmoureh@gmail.com"
+            href="mailto:hello@trance-ai.com"
             className="w-fit text-text-primary underline decoration-border underline-offset-4 transition-colors hover:decoration-accent"
           >
-            manuelmoureh@gmail.com
+            hello@trance-ai.com
           </a>
         </div>
       </div>

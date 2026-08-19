@@ -69,7 +69,7 @@ export function Hero() {
 
             <motion.div variants={item} className="mt-9">
               <a
-                href="#apply"
+                href="/apply"
                 className="inline-flex h-12 items-center rounded-full bg-accent px-7 text-[15px] font-medium text-accent-on transition-transform hover:bg-accent-hover active:scale-[0.98]"
               >
                 Apply now
