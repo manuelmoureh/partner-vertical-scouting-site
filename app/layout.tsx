@@ -4,9 +4,9 @@ import { Nav } from "./components/Nav";
 import { Footer } from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Vuria | Backing validated AI products",
+  title: "Vuria | Investing in validated AI products",
   description:
-    "We back validated AI products and help them scale, with capital, engineers, and access to investors and clients.",
+    "We invest in validated AI products and help them scale, with capital, engineers, and access to investors and clients.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

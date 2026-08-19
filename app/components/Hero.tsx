@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
-import { AsteriskSimple } from "@phosphor-icons/react";
+import { CaretDown } from "@phosphor-icons/react";
 
 const container = {
   hidden: {},
@@ -19,10 +19,22 @@ const item = {
 };
 
 const offers = [
-  "Capital",
-  "Engineers",
-  "Investors and clients",
-  "Scaling support",
+  {
+    label: "Capital",
+    body: "Sized to what the business actually needs.",
+  },
+  {
+    label: "Engineers",
+    body: "Hands-on, embedded alongside your team.",
+  },
+  {
+    label: "Investors and clients",
+    body: "Warm introductions from our network.",
+  },
+  {
+    label: "Scaling support",
+    body: "Fundraising, growth strategy, and help preparing for your next raise or sale.",
+  },
 ];
 
 export function Hero() {
@@ -42,7 +54,7 @@ export function Hero() {
               variants={item}
               className="text-4xl font-bold leading-[1.1] tracking-tight text-text-primary md:text-5xl"
             >
-              We back{" "}
+              We invest in{" "}
               <span className="accent-gradient-text">validated AI</span>{" "}
               products and help them scale.
             </motion.h1>
@@ -62,9 +74,6 @@ export function Hero() {
               >
                 Apply now
               </a>
-              <p className="mt-3 text-[13px] text-text-tertiary">
-                Free to apply. No obligation.
-              </p>
             </motion.div>
           </div>
 
@@ -73,24 +82,26 @@ export function Hero() {
             className="flex md:col-span-5 md:h-full md:flex-col md:justify-center"
           >
             <div className="overflow-hidden rounded-[16px] border border-border">
-              <div className="bg-accent px-5 py-2.5 text-[13px] font-medium uppercase tracking-[0.06em] text-accent-on">
+              <div className="bg-accent px-5 py-2.5 text-[13px] font-medium text-accent-on">
                 What we provide
               </div>
               <div className="divide-y divide-border bg-bg-elevated">
                 {offers.map((offer) => (
-                  <div
-                    key={offer}
-                    className="flex items-center gap-3 px-5 py-3"
-                  >
-                    <AsteriskSimple
-                      size={14}
-                      weight="bold"
-                      className="shrink-0 text-accent"
-                    />
-                    <span className="text-[15px] text-text-primary">
-                      {offer}
-                    </span>
-                  </div>
+                  <details key={offer.label} className="group px-5 py-3">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
+                      <span className="text-[15px] text-text-primary">
+                        {offer.label}
+                      </span>
+                      <CaretDown
+                        size={14}
+                        weight="bold"
+                        className="shrink-0 text-text-tertiary transition-transform duration-200 group-open:rotate-180"
+                      />
+                    </summary>
+                    <p className="mt-2 text-[13.5px] leading-relaxed text-text-secondary">
+                      {offer.body}
+                    </p>
+                  </details>
                 ))}
               </div>
             </div>
