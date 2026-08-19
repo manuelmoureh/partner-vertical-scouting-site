@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
-import { CaretDown } from "@phosphor-icons/react";
+import { AsteriskSimple, CaretDown } from "@phosphor-icons/react";
 
 const container = {
   hidden: {},
@@ -89,8 +89,15 @@ export function Hero() {
                 {offers.map((offer) => (
                   <details key={offer.label} className="group px-5 py-3">
                     <summary className="flex cursor-pointer list-none items-center justify-between gap-3">
-                      <span className="text-[15px] text-text-primary">
-                        {offer.label}
+                      <span className="flex items-center gap-3">
+                        <AsteriskSimple
+                          size={14}
+                          weight="bold"
+                          className="shrink-0 text-accent"
+                        />
+                        <span className="text-[15px] text-text-primary">
+                          {offer.label}
+                        </span>
                       </span>
                       <CaretDown
                         size={14}

@@ -3,11 +3,11 @@ import Link from "next/link";
 import { Reveal } from "./Reveal";
 
 const ventures = [
-  { name: "Trance AI", src: "/logos/trance-ai.png", w: 180, h: 33 },
-  { name: "Afridemy", src: "/logos/afridemy.png", w: 180, h: 45 },
-  { name: "Novara", src: "/logos/novara.png", w: 150, h: 26 },
-  { name: "Tizy", src: "/logos/tizy.png", w: 160, h: 32 },
-  { name: "Zenia", src: "/logos/zenia.png", w: 108, h: 42 },
+  { name: "Trance AI", src: "/logos/trance-ai.png", w: 180, h: 33, size: "h-8 md:h-9" },
+  { name: "Afridemy", src: "/logos/afridemy.png", w: 180, h: 45, size: "h-11 md:h-12" },
+  { name: "Novara", src: "/logos/novara.png", w: 150, h: 26, size: "h-8 md:h-9" },
+  { name: "Tizy", src: "/logos/tizy.png", w: 160, h: 32, size: "h-8 md:h-9" },
+  { name: "Zenia", src: "/logos/zenia.png", w: 156, h: 41, size: "h-8 md:h-9" },
 ];
 
 export function VenturesTeaser() {
@@ -33,7 +33,7 @@ export function VenturesTeaser() {
                 width={v.w}
                 height={v.h}
                 loading="eager"
-                className="logo-mono h-8 w-auto object-contain md:h-9"
+                className={`logo-mono w-auto object-contain ${v.size}`}
               />
             ))}
           </div>

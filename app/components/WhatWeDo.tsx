@@ -6,13 +6,16 @@ const stats = [
   { value: "5", label: "Ventures we've already built" },
 ];
 
-const countries = [
-  { name: "Kenya", offset: "md:translate-y-0" },
-  { name: "Nigeria", offset: "md:-translate-y-3" },
-  { name: "South Africa", offset: "md:translate-y-2" },
-  { name: "Egypt", offset: "md:-translate-y-2" },
-  { name: "Ghana", offset: "md:translate-y-3" },
-];
+const topRow = ["Kenya", "Nigeria", "South Africa", "Egypt"];
+const bottomRow = ["Ghana"];
+
+function Pill({ name }: { name: string }) {
+  return (
+    <span className="inline-flex items-center rounded-full border border-border bg-bg px-4 py-2 text-[13.5px] font-medium text-text-primary">
+      {name}
+    </span>
+  );
+}
 
 export function WhatWeDo() {
   return (
@@ -52,15 +55,17 @@ export function WhatWeDo() {
               loading="eager"
               className="h-24 w-auto object-contain"
             />
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              {countries.map((country) => (
-                <span
-                  key={country.name}
-                  className={`inline-flex items-center rounded-full border border-border bg-bg px-4 py-2 text-[13.5px] font-medium text-text-primary ${country.offset}`}
-                >
-                  {country.name}
-                </span>
-              ))}
+            <div className="flex flex-col items-center gap-3">
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                {topRow.map((name) => (
+                  <Pill key={name} name={name} />
+                ))}
+              </div>
+              <div className="flex items-center justify-center gap-3">
+                {bottomRow.map((name) => (
+                  <Pill key={name} name={name} />
+                ))}
+              </div>
             </div>
           </div>
         </Reveal>

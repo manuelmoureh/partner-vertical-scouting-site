@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 const ventures = [
-  { name: "Trance AI", src: "/logos/trance-ai.png", w: 220, h: 40 },
-  { name: "Afridemy", src: "/logos/afridemy.png", w: 220, h: 55 },
-  { name: "Novara", src: "/logos/novara.png", w: 190, h: 33 },
-  { name: "Tizy", src: "/logos/tizy.png", w: 200, h: 40 },
-  { name: "Zenia", src: "/logos/zenia.png", w: 130, h: 51 },
+  { name: "Trance AI", src: "/logos/trance-ai.png", w: 220, h: 40, size: "h-9 md:h-10" },
+  { name: "Afridemy", src: "/logos/afridemy.png", w: 220, h: 55, size: "h-12 md:h-14" },
+  { name: "Novara", src: "/logos/novara.png", w: 190, h: 33, size: "h-9 md:h-10" },
+  { name: "Tizy", src: "/logos/tizy.png", w: 200, h: 40, size: "h-9 md:h-10" },
+  { name: "Zenia", src: "/logos/zenia.png", w: 190, h: 50, size: "h-9 md:h-10" },
 ];
 
 export default function ProofPage() {
@@ -36,7 +36,7 @@ export default function ProofPage() {
                   width={v.w}
                   height={v.h}
                   loading="eager"
-                  className="h-9 w-auto object-contain md:h-10"
+                  className={`w-auto object-contain ${v.size}`}
                 />
               ))}
             </div>
