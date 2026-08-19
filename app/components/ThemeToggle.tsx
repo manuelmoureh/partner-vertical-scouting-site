@@ -8,15 +8,7 @@ export function ThemeToggle({ className }: { className?: string }) {
 
   useEffect(() => {
     const current = document.documentElement.getAttribute("data-theme");
-    if (current === "light" || current === "dark") {
-      setTheme(current);
-    } else {
-      setTheme(
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light",
-      );
-    }
+    setTheme(current === "dark" ? "dark" : "light");
   }, []);
 
   function toggle() {

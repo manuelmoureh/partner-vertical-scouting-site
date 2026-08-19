@@ -16,6 +16,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      data-theme="light"
       className={`h-full antialiased ${satoshi.variable} ${jetbrainsMono.variable}`}
     >
       <head>
