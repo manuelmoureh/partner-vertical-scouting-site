@@ -140,12 +140,6 @@ export function Hero() {
             priority
             className="h-full w-full object-cover"
           />
-          <div
-            className="pointer-events-none absolute inset-x-0 top-0 h-16"
-            style={{
-              background: "linear-gradient(180deg, var(--bg), transparent)",
-            }}
-          />
         </div>
       </motion.div>
     </section>
